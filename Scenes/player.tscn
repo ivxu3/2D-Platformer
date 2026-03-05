@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bycdqoj8doefv"]
+
+[ext_resource type="Texture2D" uid="uid://dyq7dh6jlegru" path="res://Sprites/Characters/character_0000.png" id="1_v0iea"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+height = 26.0
+
+[node name="Player" type="CharacterBody2D" unique_id=2056104589]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1105655187]
+texture = ExtResource("1_v0iea")
+offset = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1769323570]
+position = Vector2(0, -13)
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1377728598]
+position = Vector2(0, -23)
+zoom = Vector2(3, 3)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=702872938]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=830731183]
