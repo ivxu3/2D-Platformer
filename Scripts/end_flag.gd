@@ -6,4 +6,7 @@ func _on_body_exited(body: Node2D) -> void:
 	if not body.is_in_group("Player"):
 		return
 	
+	call_deferred("change_scene")
+
+func change_scene():
 	get_tree().change_scene_to_packed(scene_to_load)
